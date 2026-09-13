@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToolBoxHub — Image, developer, calculator &amp; text tools</title>
+<meta name="description" content="16 free browser tools: image compressor, resizer, converter, favicon generator, JSON formatter, Base64 encoder, UUID generator, timestamp converter, percentage/age/BMI/GPA calculators, word counter, character counter, case converter, duplicate line remover.">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="brand" href="home.html" aria-label="ToolBoxHub home">
+      <span class="brand-mark">🔧</span>
+      <span>
+        <span class="brand-name">ToolBox<span>Hub</span></span>
+        <small>All Tools in One Place</small>
+      </span>
+    </a>
+
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input id="tool-search" type="search" placeholder="Search tools..." aria-label="Search tools">
+    </div>
+
+    <div class="top-actions">
+      <span class="status-pill"><span class="status-dot"></span> Online</span>
+      <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">☀</button>
+      <button class="icon-btn" type="button" aria-label="More options">•••</button>
+    </div>
+  </div>
+</header>
+
+<main class="shell">
+  <div class="layout">
+
+    <nav class="index" id="nav" aria-label="Tool categories">
+      <div class="side-brand">TOOLBOXHUB</div>
+      <div class="index-head"><span>MENU</span><span class="index-count">16</span></div>
+
+      <button class="active nav-home" data-home="true">⌂ <span>Home</span></button>
+
+      <div class="index-label">Categories</div>
+      <button data-category="all">▦ <span>All Tools</span></button>
+      <button data-category="calculators">▣ <span>Calculators</span></button>
+      <button data-category="converters">↔ <span>Converters</span></button>
+      <button data-category="generators">ϟ <span>Generators</span></button>
+      <button data-category="text">▤ <span>Text Tools</span></button>
+      <button data-category="image">▧ <span>Image Tools</span></button>
+      <button data-category="developer">&lt;/&gt; <span>Developer Tools</span></button>
+      <button data-category="productivity">◷ <span>Productivity</span></button>
+
+      <div class="side-divider"></div>
+      <button data-category="settings">⚙ <span>Settings</span></button>
+      <button data-category="help">? <span>Help &amp; Support</span></button>
+
+      <div class="privacy-card side-privacy">
+        <span class="privacy-icon">✓</span>
+        <div><strong>Your Privacy Matters</strong><small>No data is stored. All processing happens in your browser.</small></div>
+      </div>
+
+      <div class="ad-slot-side">Ad space<br>(sidebar unit)</div>
+    </nav>
+
+    <section class="dashboard" id="dashboard">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <div class="hero-icon">🔧</div>
+          <div>
+            <div class="eyebrow">TOOLBOX WORKSPACE</div>
+            <h1>Welcome to <span>ToolBoxHub</span></h1>
+            <p>Powerful online tools for your daily needs.</p>
+            <small>Choose a tool from the categories below and get started instantly.</small>
+          </div>
+        </div>
+        <div class="hero-features">
+          <div><b>ϟ</b><strong>Fast</strong><small>Instant results</small></div>
+          <div><b>♢</b><strong>Secure</strong><small>Privacy focused</small></div>
+          <div><b>☁</b><strong>No Install</strong><small>Works in browser</small></div>
+        </div>
+      </section>
+
+      <div class="section-heading">
+        <div><h2>All Tools</h2><span class="heading-line"></span></div>
+        <span id="tool-total">16 tools available</span>
+      </div>
+
+      <section class="tool-grid" id="tool-grid">
+
+        <button class="tool-card" data-tool="img-compress" data-category="image">
+          <span class="tool-card-icon">▣</span><span class="tool-arrow">→</span>
+          <strong>Image Compressor</strong><p>Reduce image file size without losing quality.</p>
+        </button>
+        <button class="tool-card" data-tool="img-resize" data-category="image">
+          <span class="tool-card-icon">↗</span><span class="tool-arrow">→</span>
+          <strong>Image Resizer</strong><p>Resize images to exact pixel dimensions.</p>
+        </button>
+        <button class="tool-card" data-tool="img-convert" data-category="image">
+          <span class="tool-card-icon">⇄</span><span class="tool-arrow">→</span>
+          <strong>Image Converter</strong><p>Convert PNG, JPEG and WebP formats.</p>
+        </button>
+        <button class="tool-card" data-tool="favicon" data-category="generators">
+          <span class="tool-card-icon">◆</span><span class="tool-arrow">→</span>
+          <strong>Favicon Generator</strong><p>Create favicon sizes for your website.</p>
+        </button>
+
+        <button class="tool-card" data-tool="json-format" data-category="developer">
+          <span class="tool-card-icon">{ }</span><span class="tool-arrow">→</span>
+          <strong>JSON Formatter</strong><p>Format and beautify your JSON data.</p>
+        </button>
+        <button class="tool-card" data-tool="base64" data-category="developer">
+          <span class="tool-card-icon">64</span><span class="tool-arrow">→</span>
+          <strong>Base64 Encoder</strong><p>Encode or decode Base64 text instantly.</p>
+        </button>
+        <button class="tool-card" data-tool="uuid" data-category="developer">
+          <span class="tool-card-icon">ID</span><span class="tool-arrow">→</span>
+          <strong>UUID Generator</strong><p>Generate random version-4 UUIDs.</p>
+        </button>
+        <button class="tool-card" data-tool="timestamp" data-category="converters">
+          <span class="tool-card-icon">◷</span><span class="tool-arrow">→</span>
+          <strong>Timestamp Converter</strong><p>Convert Unix timestamps to readable dates.</p>
+        </button>
+
+        <button class="tool-card" data-tool="percent" data-category="calculators">
+          <span class="tool-card-icon">%</span><span class="tool-arrow">→</span>
+          <strong>Percentage Calculator</strong><p>Calculate percentages quickly and easily.</p>
+        </button>
+        <button class="tool-card" data-tool="age" data-category="calculators">
+          <span class="tool-card-icon">⌁</span><span class="tool-arrow">→</span>
+          <strong>Age Calculator</strong><p>Calculate your exact age from your birth date.</p>
+        </button>
+        <button class="tool-card" data-tool="bmi" data-category="calculators">
+          <span class="tool-card-icon">♙</span><span class="tool-arrow">→</span>
+          <strong>BMI Calculator</strong><p>Check your Body Mass Index easily.</p>
+        </button>
+        <button class="tool-card" data-tool="gpa" data-category="calculators">
+          <span class="tool-card-icon">◆</span><span class="tool-arrow">→</span>
+          <strong>GPA Calculator</strong><p>Calculate your GPA and academic performance.</p>
+        </button>
+
+        <button class="tool-card" data-tool="word-count" data-category="text">
+          <span class="tool-card-icon">W</span><span class="tool-arrow">→</span>
+          <strong>Word Counter</strong><p>Count words, characters and reading time.</p>
+        </button>
+        <button class="tool-card" data-tool="char-count" data-category="text">
+          <span class="tool-card-icon">A</span><span class="tool-arrow">→</span>
+          <strong>Character Counter</strong><p>Count characters with and without spaces.</p>
+        </button>
+        <button class="tool-card" data-tool="case-convert" data-category="text">
+          <span class="tool-card-icon">Aa</span><span class="tool-arrow">→</span>
+          <strong>Case Converter</strong><p>Convert text to upper, lower or title case.</p>
+        </button>
+        <button class="tool-card" data-tool="dedupe-lines" data-category="text">
+          <span class="tool-card-icon">≡</span><span class="tool-arrow">→</span>
+          <strong>Remove Duplicate Lines</strong><p>Clean repeated lines from your text.</p>
+        </button>
+      </section>
+
+      <div class="dashboard-ad ad-slot-inline">Ad space (in-article unit)</div>
+
+      <div class="worksheet" id="worksheet">
+        <div class="workspace-bar">
+          <button class="back-tools" id="back-tools" type="button">← Back to all tools</button>
+          <div><span class="workspace-kicker">ACTIVE TOOL</span><span class="workspace-title" id="active-tool-title">Toolbox</span></div>
+        </div>
+      <!-- ===================== IMAGE COMPRESSOR ===================== -->
+      <section class="tool-panel" id="panel-img-compress">
+        <h2>Image Compressor</h2>
+        <p class="tool-sub">Shrink an image's file size by adjusting quality. Runs locally — nothing is uploaded.</p>
+
+        <label for="ic-file">Choose an image</label>
+        <input type="file" id="ic-file" accept="image/*">
+
+        <div class="field-row" style="margin-top:16px;">
+          <div>
+            <label for="ic-quality">Quality: <span id="ic-quality-val">70%</span></label>
+            <input type="range" id="ic-quality" min="10" max="100" value="70" oninput="document.getElementById('ic-quality-val').textContent=this.value+'%'">
+          </div>
+        </div>
+        <button class="btn" onclick="compressImage()">Compress Image</button>
+
+        <div class="result" id="ic-result">
+          <div class="preview-row" id="ic-previews"></div>
+          <div class="result-detail" id="ic-sizes"></div>
+          <a id="ic-download" class="btn btn-secondary" style="display:inline-block;margin-top:12px;">Download compressed image</a>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== IMAGE RESIZER ===================== -->
+      <section class="tool-panel" id="panel-img-resize">
+        <h2>Image Resizer</h2>
+        <p class="tool-sub">Resize an image to exact pixel dimensions.</p>
+
+        <label for="ir-file">Choose an image</label>
+        <input type="file" id="ir-file" accept="image/*" onchange="loadResizeImage(event)">
+
+        <div class="field-row" style="margin-top:16px;">
+          <div><label for="ir-width">Width (px)</label><input type="number" id="ir-width" placeholder="800"></div>
+          <div><label for="ir-height">Height (px)</label><input type="number" id="ir-height" placeholder="600"></div>
+        </div>
+        <div class="checkbox-row"><input type="checkbox" id="ir-aspect" checked><label for="ir-aspect" style="margin:0;">Maintain aspect ratio</label></div>
+        <button class="btn" onclick="resizeImage()">Resize Image</button>
+
+        <div class="result" id="ir-result">
+          <div class="preview-row" id="ir-previews"></div>
+          <a id="ir-download" class="btn btn-secondary" style="display:inline-block;margin-top:12px;">Download resized image</a>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== IMAGE CONVERTER ===================== -->
+      <section class="tool-panel" id="panel-img-convert">
+        <h2>Image Converter</h2>
+        <p class="tool-sub">Convert an image between PNG, JPEG and WebP.</p>
+
+        <label for="cv-file">Choose an image</label>
+        <input type="file" id="cv-file" accept="image/*">
+
+        <div class="field-row" style="margin-top:16px;">
+          <div>
+            <label for="cv-format">Convert to</label>
+            <select id="cv-format">
+              <option value="image/png">PNG</option>
+              <option value="image/jpeg">JPEG</option>
+              <option value="image/webp">WebP</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn" onclick="convertImage()">Convert Image</button>
+
+        <div class="result" id="cv-result">
+          <div class="preview-row" id="cv-previews"></div>
+          <a id="cv-download" class="btn btn-secondary" style="display:inline-block;margin-top:12px;">Download converted image</a>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== FAVICON GENERATOR ===================== -->
+      <section class="tool-panel" id="panel-favicon">
+        <h2>Favicon Generator</h2>
+        <p class="tool-sub">Upload a square image to generate favicon sizes for a website.</p>
+
+        <label for="fav-file">Choose an image (square works best)</label>
+        <input type="file" id="fav-file" accept="image/*">
+        <button class="btn" onclick="generateFavicons()">Generate Favicons</button>
+
+        <div class="result" id="fav-result">
+          <div class="preview-row" id="fav-previews"></div>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== JSON FORMATTER ===================== -->
+      <section class="tool-panel" id="panel-json-format">
+        <h2>JSON Formatter</h2>
+        <p class="tool-sub">Pretty-print or minify JSON, and catch syntax errors.</p>
+
+        <textarea id="json-input" class="ws-textarea" placeholder='{"example": "paste your JSON here"}'></textarea>
+        <div class="btn-row" style="margin-top:12px;">
+          <button class="btn" onclick="formatJSON(2)">Format</button>
+          <button class="btn btn-secondary" onclick="formatJSON(0)">Minify</button>
+        </div>
+        <div class="error-msg" id="json-error"></div>
+
+        <div class="result" id="json-result">
+          <div class="copy-row"><span class="result-label">Output</span><button class="copy-btn" onclick="copyText('json-output', this)">Copy</button></div>
+          <pre class="output-box" id="json-output"></pre>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== BASE64 ENCODER ===================== -->
+      <section class="tool-panel" id="panel-base64">
+        <h2>Base64 Encoder</h2>
+        <p class="tool-sub">Encode text to Base64, or decode Base64 back to text.</p>
+
+        <div class="field-row">
+          <div>
+            <label for="b64-mode">Mode</label>
+            <select id="b64-mode">
+              <option value="encode">Encode (text → Base64)</option>
+              <option value="decode">Decode (Base64 → text)</option>
+            </select>
+          </div>
+        </div>
+        <textarea id="b64-input" class="ws-textarea" placeholder="Enter text here"></textarea>
+        <button class="btn" onclick="runBase64()">Convert</button>
+        <div class="error-msg" id="b64-error">Invalid Base64 string — check for missing characters.</div>
+
+        <div class="result" id="b64-result">
+          <div class="copy-row"><span class="result-label">Output</span><button class="copy-btn" onclick="copyText('b64-output', this)">Copy</button></div>
+          <pre class="output-box" id="b64-output"></pre>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== UUID GENERATOR ===================== -->
+      <section class="tool-panel" id="panel-uuid">
+        <h2>UUID Generator</h2>
+        <p class="tool-sub">Generate random version-4 UUIDs.</p>
+
+        <div class="field-row">
+          <div><label for="uuid-count">How many?</label><input type="number" id="uuid-count" value="1" min="1" max="50"></div>
+        </div>
+        <button class="btn" onclick="generateUUIDs()">Generate</button>
+
+        <div class="result" id="uuid-result">
+          <div class="copy-row"><span class="result-label">Output</span><button class="copy-btn" onclick="copyText('uuid-output', this)">Copy all</button></div>
+          <pre class="output-box" id="uuid-output"></pre>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== TIMESTAMP CONVERTER ===================== -->
+      <section class="tool-panel" id="panel-timestamp">
+        <h2>Timestamp Converter</h2>
+        <p class="tool-sub">Convert between Unix timestamps and readable dates.</p>
+
+        <h3 class="sub-heading">Timestamp → Date</h3>
+        <div class="field-row">
+          <div><label for="ts-input">Unix timestamp (seconds)</label><input type="number" id="ts-input" placeholder="1700000000"></div>
+        </div>
+        <div class="btn-row">
+          <button class="btn" onclick="tsToDate()">Convert</button>
+          <button class="btn btn-secondary" onclick="useCurrentTs()">Use current timestamp</button>
+        </div>
+        <div class="result-detail" id="ts-to-date-out" style="margin-top:14px;"></div>
+
+        <h3 class="sub-heading">Date → Timestamp</h3>
+        <div class="field-row">
+          <div><label for="ts-date">Date and time</label><input type="datetime-local" id="ts-date"></div>
+        </div>
+        <button class="btn" onclick="dateToTs()">Convert</button>
+        <div class="result-detail" id="ts-to-num-out" style="margin-top:14px;"></div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== PERCENTAGE CALCULATOR ===================== -->
+      <section class="tool-panel" id="panel-percent">
+        <h2>Percentage Calculator</h2>
+        <p class="tool-sub">Three common percentage questions, answered directly.</p>
+
+        <h3 class="sub-heading">What is X% of Y?</h3>
+        <div class="field-row">
+          <div><label for="pc1-x">X (percent)</label><input type="number" id="pc1-x" placeholder="20"></div>
+          <div><label for="pc1-y">Y (value)</label><input type="number" id="pc1-y" placeholder="150"></div>
+        </div>
+        <button class="btn" onclick="calcPercentOf()">Calculate</button>
+        <div class="result-detail" id="pc1-out" style="margin-top:12px;"></div>
+
+        <h3 class="sub-heading">X is what percent of Y?</h3>
+        <div class="field-row">
+          <div><label for="pc2-x">X (part)</label><input type="number" id="pc2-x" placeholder="30"></div>
+          <div><label for="pc2-y">Y (whole)</label><input type="number" id="pc2-y" placeholder="150"></div>
+        </div>
+        <button class="btn" onclick="calcIsWhatPercent()">Calculate</button>
+        <div class="result-detail" id="pc2-out" style="margin-top:12px;"></div>
+
+        <h3 class="sub-heading">Percent change from X to Y</h3>
+        <div class="field-row">
+          <div><label for="pc3-x">X (from)</label><input type="number" id="pc3-x" placeholder="80"></div>
+          <div><label for="pc3-y">Y (to)</label><input type="number" id="pc3-y" placeholder="100"></div>
+        </div>
+        <button class="btn" onclick="calcPercentChange()">Calculate</button>
+        <div class="result-detail" id="pc3-out" style="margin-top:12px;"></div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== AGE CALCULATOR ===================== -->
+      <section class="tool-panel" id="panel-age">
+        <h2>Age Calculator</h2>
+        <p class="tool-sub">Exact age in years, months and days from a birth date.</p>
+
+        <div class="field-row">
+          <div><label for="age-dob">Date of birth</label><input type="date" id="age-dob"></div>
+          <div><label for="age-to">Calculate age on</label><input type="date" id="age-to"></div>
+        </div>
+        <button class="btn" onclick="calcAge()">Calculate Age</button>
+
+        <div class="result" id="age-result">
+          <div class="result-label">Exact age</div>
+          <div class="result-value" id="age-value">—</div>
+          <div class="result-detail"><div id="age-days">Total days lived: —</div></div>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== BMI CALCULATOR ===================== -->
+      <section class="tool-panel" id="panel-bmi">
+        <h2>BMI Calculator</h2>
+        <p class="tool-sub">Body Mass Index from your height and weight.</p>
+
+        <div class="field-row">
+          <div><label for="bmi-height">Height (cm)</label><input type="number" id="bmi-height" placeholder="170"></div>
+          <div><label for="bmi-weight">Weight (kg)</label><input type="number" id="bmi-weight" placeholder="65"></div>
+        </div>
+        <button class="btn" onclick="calcBMI()">Calculate BMI</button>
+
+        <div class="result" id="bmi-result">
+          <div class="result-label">Your BMI</div>
+          <div class="result-value" id="bmi-value">—</div>
+          <div class="bmi-scale" id="bmi-scale">
+            <span data-range="under">Underweight &lt;18.5</span>
+            <span data-range="normal">Normal 18.5–24.9</span>
+            <span data-range="over">Overweight 25–29.9</span>
+            <span data-range="obese">Obese 30+</span>
+          </div>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== GPA CALCULATOR ===================== -->
+      <section class="tool-panel" id="panel-gpa">
+        <h2>GPA Calculator</h2>
+        <p class="tool-sub">Weighted GPA from letter grades and credit hours (4.0 scale).</p>
+
+        <div id="gpa-rows"></div>
+        <button class="btn btn-secondary" onclick="addGpaRow()">Add course</button>
+        <button class="btn" onclick="calcGPA()" style="margin-left:8px;">Calculate GPA</button>
+
+        <div class="result" id="gpa-result">
+          <div class="result-label">Your GPA</div>
+          <div class="result-value" id="gpa-value">—</div>
+          <div class="result-detail" id="gpa-detail"></div>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== WORD COUNTER ===================== -->
+      <section class="tool-panel" id="panel-word-count">
+        <h2>Word Counter</h2>
+        <p class="tool-sub">Live word count, sentence count and reading time as you type.</p>
+
+        <textarea id="wc-input" class="ws-textarea" oninput="updateWordCount()" placeholder="Paste or type text..."></textarea>
+
+        <div class="stats-grid">
+          <div class="stat-card"><div class="num" id="wc-words">0</div><div class="lbl">Words</div></div>
+          <div class="stat-card"><div class="num" id="wc-chars">0</div><div class="lbl">Characters</div></div>
+          <div class="stat-card"><div class="num" id="wc-sentences">0</div><div class="lbl">Sentences</div></div>
+          <div class="stat-card"><div class="num" id="wc-paragraphs">0</div><div class="lbl">Paragraphs</div></div>
+          <div class="stat-card"><div class="num" id="wc-time">0 min</div><div class="lbl">Reading time</div></div>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== CHARACTER COUNTER ===================== -->
+      <section class="tool-panel" id="panel-char-count">
+        <h2>Character Counter</h2>
+        <p class="tool-sub">Character count with and without spaces — handy for bios and captions with limits.</p>
+
+        <textarea id="cc-input" class="ws-textarea" oninput="updateCharCount()" placeholder="Type or paste text..."></textarea>
+
+        <div class="stats-grid">
+          <div class="stat-card"><div class="num" id="cc-with">0</div><div class="lbl">With spaces</div></div>
+          <div class="stat-card"><div class="num" id="cc-without">0</div><div class="lbl">Without spaces</div></div>
+          <div class="stat-card"><div class="num" id="cc-lines">0</div><div class="lbl">Lines</div></div>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== CASE CONVERTER ===================== -->
+      <section class="tool-panel" id="panel-case-convert">
+        <h2>Case Converter</h2>
+        <p class="tool-sub">Switch text between UPPERCASE, lowercase, Title Case and Sentence case.</p>
+
+        <textarea id="case-input" class="ws-textarea" placeholder="Enter text"></textarea>
+        <div class="btn-row" style="margin-top:12px;">
+          <button class="btn btn-secondary" onclick="convertCase('upper')">UPPERCASE</button>
+          <button class="btn btn-secondary" onclick="convertCase('lower')">lowercase</button>
+          <button class="btn btn-secondary" onclick="convertCase('title')">Title Case</button>
+          <button class="btn btn-secondary" onclick="convertCase('sentence')">Sentence case</button>
+        </div>
+
+        <div class="result" id="case-result">
+          <div class="copy-row"><span class="result-label">Output</span><button class="copy-btn" onclick="copyText('case-output', this)">Copy</button></div>
+          <pre class="output-box" id="case-output"></pre>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+      <!-- ===================== REMOVE DUPLICATE LINES ===================== -->
+      <section class="tool-panel" id="panel-dedupe-lines">
+        <h2>Remove Duplicate Lines</h2>
+        <p class="tool-sub">Paste a list and remove repeated lines, keeping the first occurrence of each.</p>
+
+        <textarea id="dedupe-input" class="ws-textarea" placeholder="One item per line"></textarea>
+        <div class="checkbox-row">
+          <input type="checkbox" id="dedupe-ci"><label for="dedupe-ci" style="margin:0;">Ignore case</label>
+        </div>
+        <div class="checkbox-row" style="margin-top:0;">
+          <input type="checkbox" id="dedupe-trim" checked><label for="dedupe-trim" style="margin:0;">Trim whitespace on each line</label>
+        </div>
+        <button class="btn" onclick="dedupeLines()">Remove Duplicates</button>
+
+        <div class="result" id="dedupe-result">
+          <div class="result-detail" id="dedupe-stat" style="margin-bottom:10px;"></div>
+          <div class="copy-row"><span class="result-label">Output</span><button class="copy-btn" onclick="copyText('dedupe-output', this)">Copy</button></div>
+          <pre class="output-box" id="dedupe-output"></pre>
+        </div>
+
+        <!-- AD SLOT -->
+        <div class="ad-slot-inline">Ad space (in-article unit)</div>
+        <!-- END AD SLOT -->
+      </section>
+
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="shell">
+  ToolBoxHub — free browser-based tools, no sign-up, nothing uploaded. Calculator results are estimates; confirm important academic, financial or medical figures independently.
+</footer>
+
+<script>
+  // ================= Navigation =================
+  const dashboard = document.getElementById('dashboard');
+  const worksheet = document.getElementById('worksheet');
+  const activeTitle = document.getElementById('active-tool-title');
+
+  const toolNames = {};
+  document.querySelectorAll('.tool-card').forEach(card=>{
+    toolNames[card.dataset.tool] = card.querySelector('strong').textContent;
+  });
+
+  function openHomePage(){
+    window.location.href = 'home.html';
+  }
+
+  function showAllTools(){
+    dashboard.classList.remove('tool-open');
+    worksheet.classList.remove('tool-open');
+    document.querySelectorAll('.tool-panel').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('#nav button').forEach(b=>b.classList.remove('active'));
+    document.querySelector('.nav-home')?.classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function selectTool(tool){
+    document.querySelectorAll('#nav button').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tool-panel').forEach(p=>p.classList.remove('active'));
+
+    const navBtn = document.querySelector(`#nav button[data-tool="${tool}"]`);
+    const panel = document.getElementById('panel-'+tool);
+    if(navBtn) navBtn.classList.add('active');
+    if(panel){
+      panel.classList.add('active');
+      activeTitle.textContent = toolNames[tool] || 'Tool';
+      dashboard.classList.add('tool-open');
+      worksheet.classList.add('tool-open');
+      setTimeout(()=>worksheet.scrollIntoView({behavior:'smooth',block:'start'}),40);
+    }
+  }
+
+  document.querySelectorAll('#nav button[data-tool]').forEach(btn=>{
+    btn.addEventListener('click', ()=>selectTool(btn.dataset.tool));
+  });
+
+  document.querySelector('.nav-home')?.addEventListener('click', openHomePage);
+  document.getElementById('back-tools')?.addEventListener('click', showAllTools);
+
+  document.querySelectorAll('#nav button[data-category]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const cat=btn.dataset.category;
+      if(cat==='settings' || cat==='help') return;
+      showAllTools();
+      if(cat==='all') return;
+      document.querySelectorAll('.tool-card').forEach(card=>{
+        card.style.display = card.dataset.category===cat ? '' : 'none';
+      });
+      const visible=[...document.querySelectorAll('.tool-card')].filter(c=>c.style.display!=='none').length;
+      document.getElementById('tool-total').textContent = visible+' tool'+(visible===1?'':'s')+' available';
+      document.querySelectorAll('#nav button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.tool-card').forEach(card=>{
+    card.addEventListener('click', ()=>selectTool(card.dataset.tool));
+  });
+
+  document.getElementById('tool-search')?.addEventListener('input', e=>{
+    const q=e.target.value.trim().toLowerCase();
+    showAllTools();
+    let count=0;
+    document.querySelectorAll('.tool-card').forEach(card=>{
+      const match=!q || card.textContent.toLowerCase().includes(q);
+      card.style.display=match?'':'none';
+      if(match) count++;
+    });
+    document.getElementById('tool-total').textContent = count+' tool'+(count===1?'':'s')+' available';
+  });
+
+  // ================= Shared helpers =================
+  function humanFileSize(bytes){
+    if(bytes < 1024) return bytes + ' B';
+    const units = ['KB','MB','GB'];
+    let i = -1;
+    do{ bytes /= 1024; i++; } while(bytes >= 1024 && i < units.length-1);
+    return bytes.toFixed(1) + ' ' + units[i];
+  }
+
+  function copyText(elId, btn){
+    const el = document.getElementById(elId);
+    const text = el.value !== undefined ? el.value : el.textContent;
+    navigator.clipboard.writeText(text).then(()=>{
+      if(btn){ const old = btn.textContent; btn.textContent = 'Copied!'; setTimeout(()=>btn.textContent = old, 1200); }
+    });
+  }
+
+  function loadImageFromInput(inputEl){
+    return new Promise((resolve, reject)=>{
+      const file = inputEl.files[0];
+      if(!file){ reject('No file selected'); return; }
+      const url = URL.createObjectURL(file);
+      const img = new Image();
+      img.onload = ()=> resolve({img, file, url});
+      img.onerror = reject;
+      img.src = url;
+    });
+  }
+
+  // ================= Image Compressor =================
+  function compressImage(){
+    const input = document.getElementById('ic-file');
+    loadImageFromInput(input).then(({img, file, url})=>{
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      const quality = document.getElementById('ic-quality').value / 100;
+
+      canvas.toBlob((blob)=>{
+        const outUrl = URL.createObjectURL(blob);
+        document.getElementById('ic-previews').innerHTML = `
+          <div class="preview-item"><img src="${url}"><div class="cap">Original</div></div>
+          <div class="preview-item"><img src="${outUrl}"><div class="cap">Compressed</div></div>`;
+        document.getElementById('ic-sizes').innerHTML = `
+          <div>Original size: ${humanFileSize(file.size)}</div>
+          <div>Compressed size: ${humanFileSize(blob.size)}</div>
+          <div>Reduction: ${Math.max(0, Math.round((1 - blob.size/file.size)*100))}%</div>`;
+        const dl = document.getElementById('ic-download');
+        dl.href = outUrl;
+        dl.download = 'compressed.jpg';
+        document.getElementById('ic-result').classList.add('show');
+      }, 'image/jpeg', quality);
+    }).catch(()=>{});
+  }
+
+  // ================= Image Resizer =================
+  let irLoaded = null;
+  function loadResizeImage(evt){
+    loadImageFromInput(document.getElementById('ir-file')).then(({img, url})=>{
+      irLoaded = {img, url};
+      document.getElementById('ir-width').placeholder = img.naturalWidth;
+      document.getElementById('ir-height').placeholder = img.naturalHeight;
+    }).catch(()=>{});
+  }
+
+  function resizeImage(){
+    if(!irLoaded){
+      loadImageFromInput(document.getElementById('ir-file')).then((data)=>{ irLoaded = data; doResize(); }).catch(()=>{});
+    } else {
+      doResize();
+    }
+  }
+
+  function doResize(){
+    const img = irLoaded.img;
+    let w = parseInt(document.getElementById('ir-width').value) || null;
+    let h = parseInt(document.getElementById('ir-height').value) || null;
+    const keepAspect = document.getElementById('ir-aspect').checked;
+    const ratio = img.naturalWidth / img.naturalHeight;
+
+    if(!w && !h){ w = img.naturalWidth; h = img.naturalHeight; }
+    else if(w && !h){ h = keepAspect ? Math.round(w/ratio) : img.naturalHeight; }
+    else if(h && !w){ w = keepAspect ? Math.round(h*ratio) : img.naturalWidth; }
+
+    const canvas = document.createElement('canvas');
+    canvas.width = w; canvas.height = h;
+    canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+
+    canvas.toBlob((blob)=>{
+      const outUrl = URL.createObjectURL(blob);
+      document.getElementById('ir-previews').innerHTML = `
+        <div class="preview-item"><img src="${irLoaded.url}"><div class="cap">Original (${img.naturalWidth}×${img.naturalHeight})</div></div>
+        <div class="preview-item"><img src="${outUrl}"><div class="cap">Resized (${w}×${h})</div></div>`;
+      const dl = document.getElementById('ir-download');
+      dl.href = outUrl;
+      dl.download = 'resized.png';
+      document.getElementById('ir-result').classList.add('show');
+    }, 'image/png');
+  }
+
+  // ================= Image Converter =================
+  function convertImage(){
+    loadImageFromInput(document.getElementById('cv-file')).then(({img, url})=>{
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth; canvas.height = img.naturalHeight;
+      canvas.getContext('2d').drawImage(img, 0, 0);
+      const format = document.getElementById('cv-format').value;
+      const ext = format.split('/')[1];
+
+      canvas.toBlob((blob)=>{
+        const outUrl = URL.createObjectURL(blob);
+        document.getElementById('cv-previews').innerHTML = `
+          <div class="preview-item"><img src="${url}"><div class="cap">Original</div></div>
+          <div class="preview-item"><img src="${outUrl}"><div class="cap">Converted (${ext.toUpperCase()})</div></div>`;
+        const dl = document.getElementById('cv-download');
+        dl.href = outUrl;
+        dl.download = 'converted.' + ext;
+        document.getElementById('cv-result').classList.add('show');
+      }, format);
+    }).catch(()=>{});
+  }
+
+  // ================= Favicon Generator =================
+  function generateFavicons(){
+    loadImageFromInput(document.getElementById('fav-file')).then(({img})=>{
+      const sizes = [16, 32, 48, 180, 192];
+      const side = Math.min(img.naturalWidth, img.naturalHeight);
+      const sx = (img.naturalWidth - side) / 2;
+      const sy = (img.naturalHeight - side) / 2;
+
+      let html = '';
+      let done = 0;
+      sizes.forEach(size=>{
+        const canvas = document.createElement('canvas');
+        canvas.width = size; canvas.height = size;
+        canvas.getContext('2d').drawImage(img, sx, sy, side, side, 0, 0, size, size);
+        canvas.toBlob((blob)=>{
+          const outUrl = URL.createObjectURL(blob);
+          html += `<div class="preview-item"><img src="${outUrl}" style="width:${Math.min(size,80)}px;height:${Math.min(size,80)}px;">
+            <div class="cap">${size}×${size}</div>
+            <a class="copy-btn" href="${outUrl}" download="favicon-${size}x${size}.png">Download</a></div>`;
+          done++;
+          if(done === sizes.length){
+            document.getElementById('fav-previews').innerHTML = html;
+            document.getElementById('fav-result').classList.add('show');
+          }
+        }, 'image/png');
+      });
+    }).catch(()=>{});
+  }
+
+  // ================= JSON Formatter =================
+  function formatJSON(indent){
+    const input = document.getElementById('json-input').value;
+    const errEl = document.getElementById('json-error');
+    try{
+      const obj = JSON.parse(input);
+      document.getElementById('json-output').textContent = JSON.stringify(obj, null, indent);
+      document.getElementById('json-result').classList.add('show');
+      errEl.classList.remove('show');
+    }catch(e){
+      errEl.textContent = 'Invalid JSON: ' + e.message;
+      errEl.classList.add('show');
+      document.getElementById('json-result').classList.remove('show');
+    }
+  }
+
+  // ================= Base64 Encoder =================
+  function runBase64(){
+    const mode = document.getElementById('b64-mode').value;
+    const input = document.getElementById('b64-input').value;
+    const errEl = document.getElementById('b64-error');
+    try{
+      let out;
+      if(mode === 'encode'){
+        out = btoa(unescape(encodeURIComponent(input)));
+      } else {
+        out = decodeURIComponent(escape(atob(input)));
+      }
+      document.getElementById('b64-output').textContent = out;
+      document.getElementById('b64-result').classList.add('show');
+      errEl.classList.remove('show');
+    }catch(e){
+      errEl.classList.add('show');
+      document.getElementById('b64-result').classList.remove('show');
+    }
+  }
+
+  // ================= UUID Generator =================
+  function uuidv4(){
+    if(crypto.randomUUID) return crypto.randomUUID();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c=>{
+      const r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
+      return v.toString(16);
+    });
+  }
+
+  function generateUUIDs(){
+    const count = Math.min(50, Math.max(1, parseInt(document.getElementById('uuid-count').value) || 1));
+    const list = [];
+    for(let i=0;i<count;i++) list.push(uuidv4());
+    document.getElementById('uuid-output').textContent = list.join('\n');
+    document.getElementById('uuid-result').classList.add('show');
+  }
+
+  // ================= Timestamp Converter =================
+  function tsToDate(){
+    const val = parseInt(document.getElementById('ts-input').value);
+    if(isNaN(val)) return;
+    const d = new Date(val * 1000);
+    document.getElementById('ts-to-date-out').innerHTML =
+      `<div><strong>${d.toString()}</strong></div><div>UTC: ${d.toUTCString()}</div><div>ISO: ${d.toISOString()}</div>`;
+  }
+
+  function useCurrentTs(){
+    document.getElementById('ts-input').value = Math.floor(Date.now()/1000);
+    tsToDate();
+  }
+
+  function dateToTs(){
+    const val = document.getElementById('ts-date').value;
+    if(!val) return;
+    const d = new Date(val);
+    document.getElementById('ts-to-num-out').innerHTML =
+      `<div><strong>${Math.floor(d.getTime()/1000)}</strong> (seconds)</div><div>${d.getTime()} (milliseconds)</div>`;
+  }
+
+  // ================= Percentage Calculator =================
+  function calcPercentOf(){
+    const x = parseFloat(document.getElementById('pc1-x').value);
+    const y = parseFloat(document.getElementById('pc1-y').value);
+    if(isNaN(x) || isNaN(y)) return;
+    document.getElementById('pc1-out').innerHTML = `<strong>${x}% of ${y} = ${(x/100*y).toLocaleString(undefined,{maximumFractionDigits:4})}</strong>`;
+  }
+
+  function calcIsWhatPercent(){
+    const x = parseFloat(document.getElementById('pc2-x').value);
+    const y = parseFloat(document.getElementById('pc2-y').value);
+    if(isNaN(x) || isNaN(y) || y === 0) return;
+    document.getElementById('pc2-out').innerHTML = `<strong>${x} is ${(x/y*100).toLocaleString(undefined,{maximumFractionDigits:4})}% of ${y}</strong>`;
+  }
+
+  function calcPercentChange(){
+    const x = parseFloat(document.getElementById('pc3-x').value);
+    const y = parseFloat(document.getElementById('pc3-y').value);
+    if(isNaN(x) || isNaN(y) || x === 0) return;
+    const change = (y - x) / x * 100;
+    const word = change >= 0 ? 'increase' : 'decrease';
+    document.getElementById('pc3-out').innerHTML = `<strong>${Math.abs(change).toLocaleString(undefined,{maximumFractionDigits:4})}% ${word}</strong> from ${x} to ${y}`;
+  }
+
+  // ================= Age Calculator =================
+  function calcAge(){
+    const dobVal = document.getElementById('age-dob').value;
+    const toVal = document.getElementById('age-to').value;
+    if(!dobVal) return;
+    const dob = new Date(dobVal);
+    const to = toVal ? new Date(toVal) : new Date();
+
+    let years = to.getFullYear() - dob.getFullYear();
+    let months = to.getMonth() - dob.getMonth();
+    let days = to.getDate() - dob.getDate();
+    if(days < 0){ months -= 1; days += new Date(to.getFullYear(), to.getMonth(), 0).getDate(); }
+    if(months < 0){ years -= 1; months += 12; }
+
+    const totalDays = Math.floor((to - dob) / 86400000);
+    document.getElementById('age-value').textContent = `${years}y ${months}m ${days}d`;
+    document.getElementById('age-days').textContent = 'Total days lived: ' + totalDays.toLocaleString();
+    document.getElementById('age-result').classList.add('show');
+  }
+
+  // ================= BMI Calculator =================
+  function calcBMI(){
+    const h = parseFloat(document.getElementById('bmi-height').value)/100;
+    const w = parseFloat(document.getElementById('bmi-weight').value);
+    if(!h || !w) return;
+    const bmi = w / (h*h);
+    document.getElementById('bmi-value').textContent = bmi.toFixed(1);
+    let cat = bmi < 18.5 ? 'under' : bmi < 25 ? 'normal' : bmi < 30 ? 'over' : 'obese';
+    document.querySelectorAll('#bmi-scale span').forEach(s=> s.classList.toggle('hit', s.dataset.range === cat));
+    document.getElementById('bmi-result').classList.add('show');
+  }
+
+  // ================= GPA Calculator =================
+  const gradePoints = {'A+':4.0,'A':4.0,'A-':3.7,'B+':3.3,'B':3.0,'B-':2.7,'C+':2.3,'C':2.0,'C-':1.7,'D':1.0,'F':0.0};
+
+  function addGpaRow(){
+    const container = document.getElementById('gpa-rows');
+    if(container.children.length >= 12) return;
+    const row = document.createElement('div');
+    row.className = 'row-flex';
+    const gradeOptions = Object.keys(gradePoints).map(g=>`<option value="${g}">${g}</option>`).join('');
+    row.innerHTML = `
+      <div class="grow"><label>Grade</label><select class="gpa-grade">${gradeOptions}</select></div>
+      <div class="grow"><label>Credit hours</label><input type="number" class="gpa-credits" value="3" min="0" step="0.5"></div>
+      <button class="remove-row-btn" onclick="this.parentElement.remove()">✕</button>`;
+    container.appendChild(row);
+  }
+
+  function calcGPA(){
+    const rows = document.querySelectorAll('#gpa-rows .row-flex');
+    let totalPoints = 0, totalCredits = 0;
+    rows.forEach(row=>{
+      const grade = row.querySelector('.gpa-grade').value;
+      const credits = parseFloat(row.querySelector('.gpa-credits').value) || 0;
+      totalPoints += gradePoints[grade] * credits;
+      totalCredits += credits;
+    });
+    if(totalCredits === 0) return;
+    const gpa = totalPoints / totalCredits;
+    document.getElementById('gpa-value').textContent = gpa.toFixed(2);
+    document.getElementById('gpa-detail').textContent = `${totalCredits} total credit hours across ${rows.length} course(s)`;
+    document.getElementById('gpa-result').classList.add('show');
+  }
+
+  // ================= Word Counter =================
+  function updateWordCount(){
+    const text = document.getElementById('wc-input').value;
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+    const chars = text.length;
+    const sentences = text.trim() ? (text.match(/[.!?]+(\s|$)/g) || []).length : 0;
+    const paragraphs = text.trim() ? text.split(/\n+/).filter(p=>p.trim().length>0).length : 0;
+    const minutes = Math.max(1, Math.round(words / 200));
+
+    document.getElementById('wc-words').textContent = words.toLocaleString();
+    document.getElementById('wc-chars').textContent = chars.toLocaleString();
+    document.getElementById('wc-sentences').textContent = sentences.toLocaleString();
+    document.getElementById('wc-paragraphs').textContent = paragraphs.toLocaleString();
+    document.getElementById('wc-time').textContent = (words === 0 ? 0 : minutes) + ' min';
+  }
+
+  // ================= Character Counter =================
+  function updateCharCount(){
+    const text = document.getElementById('cc-input').value;
+    document.getElementById('cc-with').textContent = text.length.toLocaleString();
+    document.getElementById('cc-without').textContent = text.replace(/\s/g,'').length.toLocaleString();
+    document.getElementById('cc-lines').textContent = (text ? text.split(/\n/).length : 0).toLocaleString();
+  }
+
+  // ================= Case Converter =================
+  function convertCase(type){
+    const text = document.getElementById('case-input').value;
+    let out;
+    if(type === 'upper') out = text.toUpperCase();
+    else if(type === 'lower') out = text.toLowerCase();
+    else if(type === 'title') out = text.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
+    else if(type === 'sentence') out = text.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase());
+    document.getElementById('case-output').textContent = out;
+    document.getElementById('case-result').classList.add('show');
+  }
+
+  // ================= Remove Duplicate Lines =================
+  function dedupeLines(){
+    const raw = document.getElementById('dedupe-input').value;
+    const ignoreCase = document.getElementById('dedupe-ci').checked;
+    const trim = document.getElementById('dedupe-trim').checked;
+    const lines = raw.split('\n');
+    const seen = new Set();
+    const out = [];
+    lines.forEach(line=>{
+      let key = trim ? line.trim() : line;
+      if(ignoreCase) key = key.toLowerCase();
+      if(!seen.has(key)){ seen.add(key); out.push(trim ? line.trim() : line); }
+    });
+    document.getElementById('dedupe-output').textContent = out.join('\n');
+    document.getElementById('dedupe-stat').textContent = `Removed ${lines.length - out.length} duplicate line(s) out of ${lines.length}.`;
+    document.getElementById('dedupe-result').classList.add('show');
+  }
+
+  // ================= Init =================
+  addGpaRow();
+  addGpaRow();
+  document.getElementById('age-to').valueAsDate = new Date();
+</script>
+
+
+<script>
+(function () {
+  const key = 'toolboxhub-theme';
+  const body = document.body;
+  const btn = document.getElementById('theme-toggle');
+
+  function applyTheme(theme) {
+    const light = theme === 'light';
+    body.classList.toggle('light-mode', light);
+    if (btn) {
+      btn.textContent = light ? '☾' : '☀';
+      btn.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+      btn.setAttribute('title', light ? 'Switch to dark mode' : 'Switch to light mode');
+    }
+  }
+
+  const saved = localStorage.getItem(key);
+  applyTheme(saved === 'light' ? 'light' : 'dark');
+
+  if (btn) {
+    btn.addEventListener('click', function () {
+      const next = body.classList.contains('light-mode') ? 'dark' : 'light';
+      localStorage.setItem(key, next);
+      applyTheme(next);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
